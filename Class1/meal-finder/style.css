@@ -134,6 +134,10 @@ input[type="text"] {
     margin: 0 5px 5px 0;
 }
 
+.display-none{
+    display: none;
+}
+
 @media (max-width: 800px) {
     .meals {
         grid-template-columns: repeat(3, 1fr);

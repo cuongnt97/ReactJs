@@ -1,32 +1,32 @@
 1.CSS in JSX:
 - Cú pháp:
-    + Cú pháp truyền thống: sử dụng thuộc tính style của các phần tử JSX, ví dụ <div style={{ color: 'red' }}>Hello World</div>
-    + Cú pháp thông qua class: sử dụng thuộc tính className của các phần tử JSX, ví dụ <div className="red-text">Hello World</div>
+    + Cú pháp truyền thống: sử dụng thuộc tính style của các phần tử JSX, ví dụ ``<div style={{ color: 'red' }}>Hello World</div>``
+    + Cú pháp thông qua class: sử dụng thuộc tính className của các phần tử JSX, ví dụ ``<div className="red-text">Hello World</div>``
 - Cách sử dụng:
     + Cú pháp truyền thống:
     Sử dụng thuộc tính style và truyền vào một đối tượng JavaScript, trong đó các thuộc tính là các thuộc tính CSS và giá trị là giá trị CSS tương ứng.
-    Ví dụ: <div style={{ color: 'red', fontSize: '16px' }}>Hello World</div>
+    Ví dụ: ``<div style={{ color: 'red', fontSize: '16px' }}>Hello World</div>``
 
     + Cú pháp thông qua class:
     Tạo một file CSS bên ngoài với các quy tắc CSS được định nghĩa trong đó.
     Import file CSS vào trong file JSX bằng cách sử dụng import hoặc require.
     Sử dụng các class đã được định nghĩa trong file CSS thông qua thuộc tính className.
     Ví dụ:
-    Tạo file styles.css với nội dung .red-text { color: red; font-size: 16px; }
-    Trong file JSX: <div className="red-text">Hello World</div>
+    Tạo file styles.css với nội dung ``.red-text { color: red; font-size: 16px; }``
+    Trong file JSX: ``<div className="red-text">Hello World</div>``
 
 - Thư viện liên quan:
-    + styled-components: thư viện cho phép sử dụng CSS trong ReactJS bằng cách sử dụng các thành phần của CSS là các chuỗi bình thường, cho phép sử dụng các biểu thức JavaScript để tạo các kiểu CSS động.
-    + emotion: thư viện tương tự styled-components.
+    + **styled-components**: thư viện cho phép sử dụng CSS trong ReactJS bằng cách sử dụng các thành phần của CSS là các chuỗi bình thường, cho phép sử dụng các biểu thức JavaScript để tạo các kiểu CSS động.
+    + **emotion**: thư viện tương tự styled-components.
 
 2. CSS Module:
 - Cú pháp:
-    Định nghĩa CSS trong một file CSS bình thường, nhưng mỗi lớp CSS được đặt tên một cách duy nhất.
-    Import file CSS vào trong file JSX bằng cách sử dụng import hoặc require.
-    Sử dụng các lớp CSS được đặt tên một cách duy nhất bằng cách sử dụng thuộc tính className.
+    + Định nghĩa CSS trong một file CSS bình thường, nhưng mỗi lớp CSS được đặt tên một cách duy nhất.
+    + Import file CSS vào trong file JSX bằng cách sử dụng import hoặc require.
+    + Sử dụng các lớp CSS được đặt tên một cách duy nhất bằng cách sử dụng thuộc tính className.
     Ví dụ:
-    Tạo file styles.module.css với nội dung .red-text { color: red; font-size: 16px; }
-    Trong file JSX: <div className={styles['red-text']}>Hello World</div>
+    + Tạo file styles.module.css với nội dung ``.red-text { color: red; font-size: 16px; }``
+    + Trong file JSX: ``<div className={styles['red-text']}>Hello World</div>``
 
 - Ưu điểm:
     + Giúp đảm bảo tính độc lập giữa các phần tử và kiểu CSS.
@@ -36,8 +36,8 @@
     + Không cho phép sử dụng các biểu thức JavaScript để tạo các kiểu CSS động.
 
 - Thư viện liên quan:
-    + css-modules: thư viện giúp định nghĩa và sử dụng CSS Module trong ReactJS.
-    + react-css-modules: thư viện giúp kết hợp CSS Module và ReactJS để sử dụng các lớp CSS được đặt tên duy nhất một cách dễ dàng.
+    + **css-modules**: thư viện giúp định nghĩa và sử dụng CSS Module trong ReactJS.
+    + **react-css-modules**: thư viện giúp kết hợp CSS Module và ReactJS để sử dụng các lớp CSS được đặt tên duy nhất một cách dễ dàng.
 
 
 3. Ưu điểm và nhược điểm của CSS in JSX và CSS Module:

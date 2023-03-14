@@ -107,3 +107,20 @@ const union = (a, b) => {
 
 console.log(union([1, 2, 3, 1], [4, 3, 2, 4]));
 // console.log(union([1, 2, 3, 2, 3], [1, 2, 3, 1, 2]));
+
+const options = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": "cb9a458a06mshde112963846efd9p157915jsnef64db61ee49"
+  },
+};
+
+const ress = fetch(
+  "https://free-to-play-games-database.p.rapidapi.com/api/filter?tag=3d.mmorpg.fantasy.pvp&platform=pc",
+  options
+)
+  .then((response) => response.json())
+  .then((response) => console.log(response))
+  .catch((err) => console.error(err));
+
+console.log(ress);

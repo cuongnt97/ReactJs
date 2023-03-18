@@ -12,9 +12,10 @@ import Cart from "./routes/Cart";
 import Profile from "./routes/Profile";
 import About from "./routes/About";
 import Blog from "./routes/Blog";
-import PostList from "./components/PostList";
-import PostDetail from "./components/PostDetail";
+import PostList, { listPostLoader } from "./components/PostList";
+import PostDetail, { postDetailLoader } from "./components/PostDetail";
 import PageNotFound from "./routes/PageNotFound";
+import Todos, { todoActions, todoLoader } from "./routes/Todos";
 
 const router = createBrowserRouter([
   {
@@ -49,13 +50,24 @@ const router = createBrowserRouter([
       {
         path: "posts",
         element: <PostList />,
+        loader: listPostLoader,
       },
-      { path: "posts/:postId", element: <PostDetail /> },
+      {
+        path: "posts/:postId",
+        element: <PostDetail />,
+        loader: postDetailLoader,
+      },
       {
         path: "/post/:postId/authors/:authorId",
         element: <Profile />,
       },
-      {path: "*", element: <PageNotFound/>}
+      {
+        path: "/todos",
+        element: <Todos />,
+        loader: todoLoader,
+        action: todoActions,
+      },
+      { path: "*", element: <PageNotFound /> },
     ],
   },
 ]);

@@ -1,0 +1,98 @@
+/* Login Page  */
+.forms-container {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 180px 0 80px;
+  column-gap: 30px;
+}
+.forms-container .form {
+  position: absolute;
+  max-width: 430px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 6px;
+  background: #fff;
+}
+.forms-container .form.signup {
+  opacity: 0;
+  pointer-events: none;
+}
+.forms-container.show-signup .form.signup {
+  opacity: 1;
+  pointer-events: auto;
+}
+.forms-container.show-signup .form.login {
+  opacity: 0;
+  pointer-events: none;
+}
+.forms-container header {
+  font-size: 28px;
+  font-weight: 600;
+  color: #232836;
+  text-align: center;
+}
+.forms-container form {
+  margin-top: 30px;
+}
+.forms-container .form .field {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 6px;
+}
+.forms-container .field input,
+.forms-container .field button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 6px;
+}
+.forms-container .field input {
+  outline: none;
+  padding: 0 15px;
+  border: 1px solid#CACACA;
+}
+.forms-container .field input:focus {
+  border-bottom-width: 2px;
+}
+.forms-container .eye-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #8b8b8b;
+  cursor: pointer;
+  padding: 5px;
+}
+.forms-container .field button {
+  color: #fff;
+  background-color: #161a21;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.forms-container .form-link {
+  text-align: center;
+  margin-top: 10px;
+}
+.forms-container .form-link span,
+.forms-container .form-link a {
+  font-size: 14px;
+  font-weight: 400;
+  color: #232836;
+}
+.forms-container .form a {
+  color: #232836;
+  text-decoration: none;
+}
+.forms-container .form-content a:hover {
+  text-decoration: underline;
+  color: #161a21;
+}

@@ -6,7 +6,7 @@ export default function PostCard({post}) {
       <Link to={`./${post.id}`}>
         <h3>{post.title}</h3>
       </Link>
-      <p>{post.title}</p>
+      <p>{post.body}</p>
     </div>
   );
 }

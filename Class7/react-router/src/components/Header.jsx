@@ -15,6 +15,7 @@ export default function Header() {
             <NavLink className='nav-link' to='cart'>Cart</NavLink>
             <NavLink className='nav-link' to='blog'>Blog</NavLink>
             <NavLink className='nav-link' to='posts'>Posts</NavLink>
+            <NavLink className='nav-link' to='todos'>Todos</NavLink>
         </nav>
     </header>
   )

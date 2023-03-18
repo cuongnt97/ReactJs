@@ -1,12 +1,16 @@
-import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import React from 'react'
+import { useLoaderData} from 'react-router-dom'
 
 export default function PostDetail() {
-    const params = useParams();
-    useEffect(() => {
-        console.log("postId", params.postId)
-    },[params])
+    const post = useLoaderData();
   return (
-    <div>PostDetail</div>
+    <div>
+      <h1>Post title: {post.title}</h1>
+      <div>Writen by: {post.userId}</div>
+      <p>Content: {post.body}</p>
+    </div>
   )
 }
+
+export const postDetailLoader = ({params}) =>
+  fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`);
